@@ -1,4 +1,5 @@
-from kimono.provenance import Source, TaggedContent, TRUST_LEVELS
+from kimono.provenance import TRUST_LEVELS, Source, TaggedContent
+
 
 def test_tagged_content_defaults():
     tc = TaggedContent(content="Hello", source=Source.USER)
@@ -7,9 +8,11 @@ def test_tagged_content_defaults():
     assert tc.timestamp is not None
     assert tc.parent_ids == []
 
+
 def test_tagged_content_custom_trust():
     tc = TaggedContent(content="Hello", source=Source.WEB_FETCH, trust_score=50)
     assert tc.trust_score == 50
+
 
 def test_trust_levels_mapping():
     assert TRUST_LEVELS[Source.USER] == 100
