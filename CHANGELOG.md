@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.0] — 2026-06-19
 
+First public release on PyPI as **`kimono-guard`** (`pip install kimono-guard`, import `kimono`).
+
 ### Added
 - **`kimono.provenance`** — `Source` enum (`USER`, `SYSTEM`, `TOOL_OUTPUT`, `WEB_FETCH`, `FILE_READ`, `EMAIL`) and `TaggedContent` dataclass with deterministic trust scores.
 - **`kimono.taint`** — `TaintRegistry` for tracking content lineage and computing minimum-trust taint scores recursively across derivation chains.
